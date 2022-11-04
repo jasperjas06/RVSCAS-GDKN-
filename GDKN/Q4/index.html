@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+   <!-- display:none ,visibility:hidden -->
+<head>
+    <style>
+        .img {
+          float: left;
+          text-align: center;
+          width: 120px;
+          border: 1px solid gray;
+          margin: 4px;
+          padding: 6px;
+        }
+        
+        button {
+          width: 100%;
+        }
+        </style>
+</head>
+<body>
+    <div class="img" id="imgbox1">Box 1<br>
+        <img src="./image//flw.jpg" alt="Italy" style="width:100%">
+        <button onclick="removeElement()">Remove</button>
+      </div>
+      
+      <div class="img" id="imgbox2">Box 2<br>
+        <img src="./image/flw.jpg" alt="Lights" style="width:100%">
+        <button onclick="changeVisibility()">Hide</button>
+      </div>
+
+      <div class="img" id="imgbox3">Box 3<br>
+        <img src="image/flw.jpg"  alt="Lights" style="width:100%">
+        <button onclick="changeVisibility()">reset</button>
+    </div>
+
+<script>
+    function removeElement() {
+      document.getElementById("imgbox1").style.display = "none";
+    }
+    
+    function changeVisibility() {
+      document.getElementById("imgbox2").style.visibility = "hidden";
+    }
+    function resetElement(){
+        document.getElementById("imgbox3").style.visibility="reset";
+    }
+    </script>
+</body>
+</html>
